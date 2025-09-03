@@ -1,7 +1,7 @@
 
-# SmartHub Firmware
+# SensorHub Firmware
 
-Firmware embarcado para dispositivos de monitoramento ambiental e automação, desenvolvido para rodar em microcontroladores ESP32. Este projeto permite a análise da qualidade do ar, controle de atuadores e comunicação em rede, sendo altamente modular e adaptável para diferentes aplicações (SmartAir, Actuator).
+Firmware embarcado para dispositivos de monitoramento ambiental e automação, desenvolvido para rodar em microcontroladores ESP32. Este projeto permite a análise da qualidade do ar, controle de atuadores e comunicação em rede, sendo altamente modular e adaptável para diferentes aplicações (Sensor, Actuator).
 
 ## Características Principais
 
@@ -10,7 +10,7 @@ Firmware embarcado para dispositivos de monitoramento ambiental e automação, d
   - Suporte a múltiplos sensores (BME680, SGP30, SGP41, SCD41, AGS10, BH1750, GP2Y1010, etc).
 - **Automação e Controle:**
   - Controle de atuadores (relés, lâmpadas, tomadas, etc) via comandos MQTT.
-  - Suporte a diferentes modos de operação: SmartAir (monitoramento) e Actuator (atuadores).
+  - Suporte a diferentes modos de operação: Sensor (monitoramento) e Actuator (atuadores).
 - **Comunicação e Conectividade:**
   - Comunicação via Wi-Fi, MQTT, e suporte a outros protocolos (LoRa, Ethernet, GPRS, ESP-NOW).
   - Envio de dados para servidores remotos e integração com plataformas IoT.
@@ -28,7 +28,7 @@ Firmware embarcado para dispositivos de monitoramento ambiental e automação, d
 - Leitura periódica dos dados ambientais e envio para o servidor.
 - Recebimento e execução de comandos remotos via MQTT.
 - Detecção de falhas em sensores e tentativas automáticas de reconexão.
-- Suporte a diferentes perfis de dispositivo via diretivas de compilação (`SMARTAIR`, `ACTUATOR`).
+- Suporte a diferentes perfis de dispositivo via diretivas de compilação (`Sensor`, `ACTUATOR`).
 - Interface para atualização de firmware Over-The-Air (OTA/FOTA).
 
 ## Estrutura do Projeto
@@ -59,7 +59,7 @@ Pronto! O dispositivo estará funcionando conforme o perfil selecionado no códi
 
 O firmware pode ser compilado para diferentes perfis, alterando as diretivas no arquivo `globaldef.h`:
 
-- `SMARTAIR` - Monitoramento ambiental
+- `SENSOR` - Monitoramento ambiental
 - `ACTUATOR` - Controle de atuadores
 
 Basta descomentar a linha correspondente ao perfil desejado e compilar o projeto.
